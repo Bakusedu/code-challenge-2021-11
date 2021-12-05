@@ -104,34 +104,36 @@
 								/>
 							</div>
 						</div>
-						<BaseLayoutGrid :gap="'small'" :element="'div'">
-							<div class="border-l-2 pl-5 space-y-3 border-secondary">
-								<BaseHeading class="mb-4" :heading-level="'2'" :theme="'h4'">Version</BaseHeading>
-								<BaseRichText
-									:body="pluginVersion"
-									:classes="'text-primary text-lg xl:text-[32px] font-medium leading-[40px]'"
-								/>
-							</div>
-							<div class="border-l-2 pl-5 space-y-3 border-secondary">
-								<BaseHeading class="mb-4" :heading-level="'2'" :theme="'h4'"
-									>Last update</BaseHeading
-								>
-								<BaseRichText
-									:body="lastUpdated"
-									:classes="'text-primary text-lg xl:text-[32px] font-medium leading-[40px]'"
-								/>
-							</div>
-							<div class="border-l-2 pl-5 space-y-3 border-secondary">
-								<BaseHeading class="mb-4 inline" :heading-level="'2'" :theme="'h4'"
-									>Compatibility</BaseHeading
-								>
-								<!-- Dropdown -->
-								<SoftwarePluginDropdown
-									:selected="pluginCompatibility"
-									:options="pluginCompatibilities"
-								/>
-							</div>
-						</BaseLayoutGrid>
+						<div class="w-full xl:max-w-[624px]">
+							<BaseLayoutGrid :gap="'small'" :element="'div'">
+								<div class="border-l-2 pl-5 space-y-3 border-secondary">
+									<BaseHeading class="mb-4" :heading-level="'2'" :theme="'h4'">Version</BaseHeading>
+									<BaseRichText
+										:body="pluginVersion"
+										:classes="'text-primary text-lg xl:text-[32px] font-medium leading-[40px]'"
+									/>
+								</div>
+								<div class="border-l-2 pl-5 space-y-3 border-secondary">
+									<BaseHeading class="mb-4" :heading-level="'2'" :theme="'h4'"
+										>Last update</BaseHeading
+									>
+									<BaseRichText
+										:body="lastUpdated"
+										:classes="'text-primary text-lg xl:text-[32px] font-medium leading-[40px]'"
+									/>
+								</div>
+								<div class="border-l-2 pl-5 space-y-3 border-secondary">
+									<BaseHeading class="mb-4 inline" :heading-level="'2'" :theme="'h4'"
+										>Compatibility</BaseHeading
+									>
+									<!-- Dropdown -->
+									<SoftwarePluginDropdown
+										:selected="pluginCompatibility"
+										:options="pluginCompatibilities"
+									/>
+								</div>
+							</BaseLayoutGrid>
+						</div>
 					</div>
 					<template v-slot:aside>
 						<div class="min-w-full xl:min-w-[321px]">
