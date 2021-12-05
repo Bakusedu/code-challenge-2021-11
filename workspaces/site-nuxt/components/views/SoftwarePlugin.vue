@@ -89,20 +89,14 @@
 
 <template>
 	<main>
-		<section class="bg-body py-16">
-			<div class="space-y-24 px-6 xl:px-16">
-				<BaseLayoutColumns
-					layout="thirds"
-					align="left"
-					valign="center"
-					gap="small"
-					element="section"
-				>
+		<section class="bg-intro py-16 flex flex-col space-y-24">
+			<div class="max-w-sm xl:max-w-xl mx-auto">
+				<BaseLayoutColumns layout="thirds" align="left" valign="center" gap="none" element="div">
 					<div class="space-y-10">
 						<div class="h-full">
-							<BaseHeading class="mb-4 text-7xl flex-wrap" :heading-level="3" :theme="'h3'">{{
-								pluginTitle
-							}}</BaseHeading>
+							<BaseHeading class="mb-4 filter drop-shadow-custom" :heading-level="3" :theme="'h3'">
+								<span class="text-4xl xl:text-[56px]">{{ pluginTitle }}</span></BaseHeading
+							>
 							<div class="space-y-3">
 								<BaseRichText
 									:body="pluginDescription"
@@ -111,14 +105,14 @@
 							</div>
 						</div>
 						<BaseLayoutGrid :gap="'small'" :element="'div'">
-							<div class="border-l-2 px-5 space-y-3 border-secondary">
+							<div class="border-l-2 pl-5 space-y-3 border-secondary">
 								<BaseHeading class="mb-4" :heading-level="'2'" :theme="'h4'">Version</BaseHeading>
 								<BaseRichText
 									:body="pluginVersion"
 									:classes="'text-primary text-lg xl:text-[32px] font-medium leading-[40px]'"
 								/>
 							</div>
-							<div class="border-l-2 px-5 space-y-3 border-secondary">
+							<div class="border-l-2 pl-5 space-y-3 border-secondary">
 								<BaseHeading class="mb-4" :heading-level="'2'" :theme="'h4'"
 									>Last update</BaseHeading
 								>
@@ -127,7 +121,7 @@
 									:classes="'text-primary text-lg xl:text-[32px] font-medium leading-[40px]'"
 								/>
 							</div>
-							<div class="border-l-2 px-5 space-y-3 border-secondary">
+							<div class="border-l-2 pl-5 space-y-3 border-secondary">
 								<BaseHeading class="mb-4 inline" :heading-level="'2'" :theme="'h4'"
 									>Compatibility</BaseHeading
 								>
@@ -140,95 +134,96 @@
 						</BaseLayoutGrid>
 					</div>
 					<template v-slot:aside>
-						<BaseCardGraphic alignment="vertical">
-							<div class="space-y-5">
-								<BaseRichText
-									:body="pluginPrice"
-									:classes="'text-primary text-6xl xl:text-7xl font-light leading-[108px]'"
-								/>
-								<BaseButton
-									:theme="'tertiery'"
-									:rounded="false"
-									:url="'https://fostercommerce.com'"
-								>
-									<span class="flex items-center">
-										Buy now
-										<svg-icon
-											:name="`icons/arrow-diagonal`"
-											fill="currentColor"
-											class="w-3 h-3 xl:w-[17.12px] xl:h-8 inline-flex"
-										/>
-									</span>
-								</BaseButton>
-							</div>
-							<template v-slot:media>
-								<BaseImage
-									:src="logo"
-									:imgClasses="'h-[225.99px] min-w-[225.99px] -mt-7'"
-									alt="ShipStation Logo"
-								/>
-							</template>
-						</BaseCardGraphic>
+						<div class="min-w-full xl:min-w-[321px]">
+							<BaseCardGraphic alignment="vertical">
+								<div class="space-y-5">
+									<p class="'text-primary text-6xl xl:text-7xl font-light leading-[108px]'">{{
+										pluginPrice
+									}}</p>
+									<BaseButton
+										:theme="'tertiery'"
+										:rounded="false"
+										:url="'https://fostercommerce.com'"
+									>
+										<span class="flex items-center text-highlight-secondary">
+											Buy now
+											<svg-icon
+												:name="`icons/arrow-diagonal`"
+												fill="currentColor"
+												class="w-3 h-3 xl:w-[17.12px] xl:h-[12px] inline-flex"
+											/>
+										</span>
+									</BaseButton>
+								</div>
+								<template v-slot:media>
+									<BaseImage
+										:src="logo"
+										:imgClasses="'h-[260px] w-[260px] xl:h-[225.99px] xl:w-[225.99px] -mt-7'"
+										alt="ShipStation Logo"
+									/>
+								</template>
+							</BaseCardGraphic>
+						</div>
 					</template>
 				</BaseLayoutColumns>
-				<section class="md:flex justify-center">
-					<ul class="w-full md:flex md:items-center xl:w-10/12">
-						<li>
-							<BaseLink
-								:url="'https://fostercommerce.com/about'"
-								:classes="'underline text-highlight-primary mr-16 text-lg md:text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
-								>About</BaseLink
-							>
-						</li>
-						<li>
-							<BaseLink
-								:url="'https://fostercommerce.com/about'"
-								:classes="'text-tertiery text-lg md:text-xl xl:text-2xl leading-10 mr-16 tracking-[0.02em]'"
-								>Changelog</BaseLink
-							>
-						</li>
-						<li>
-							<BaseLink
-								:url="'https://fostercommerce.com/about'"
-								:classes="'flex items-center text-tertiery text-lg md:text-xl xl:text-2xl leading-10 mr-16 tracking-[0.02em]'"
-							>
-								Documentation
-								<svg-icon
-									:name="`icons/arrow-diagonal`"
-									fill="currentColor"
-									class="w-3 h-3 xl:w-[17.12px] xl:h-8 inline"
-								/>
-							</BaseLink>
-						</li>
-						<li>
-							<BaseLink
-								:url="'https://fostercommerce.com/about'"
-								:classes="'flex items-center text-tertiery text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
-							>
-								Repository
-								<svg-icon
-									:name="`icons/arrow-diagonal`"
-									fill="currentColor"
-									class="w-3 h-3 xl:w-[17.12px] xl:h-8 inline"
-								/>
-							</BaseLink>
-						</li>
-					</ul>
-				</section>
+			</div>
+			<div class="min-w-sm mx-auto md:items-center xl:min-w-3/4">
+				<ul class="md:flex w-full justify-between">
+					<li>
+						<BaseLink
+							:url="'https://fostercommerce.com/about'"
+							:classes="'underline text-highlight-primary text-lg md:text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
+							>About</BaseLink
+						>
+					</li>
+					<li>
+						<BaseLink
+							:url="'https://fostercommerce.com/about'"
+							:classes="'text-tertiery text-lg md:text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
+							>Changelog</BaseLink
+						>
+					</li>
+					<li>
+						<BaseLink
+							:url="'https://fostercommerce.com/about'"
+							:classes="'flex items-center text-tertiery text-lg md:text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
+						>
+							Documentation
+							<svg-icon
+								:name="`icons/arrow-diagonal`"
+								fill="currentColor"
+								class="w-3 h-3 xl:w-[17.12px] xl:h-[12px] inline"
+							/>
+						</BaseLink>
+					</li>
+					<li>
+						<BaseLink
+							:url="'https://fostercommerce.com/about'"
+							:classes="'flex items-center text-tertiery text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
+						>
+							Repository
+							<svg-icon
+								:name="`icons/arrow-diagonal`"
+								fill="currentColor"
+								class="w-3 h-3 xl:w-[17.12px] xl:h-[12px] inline"
+							/>
+						</BaseLink>
+					</li>
+				</ul>
 			</div>
 		</section>
-		<section class="bg-highlight-tertiery">
-			<div class="py-10 px-6 xl:px-16 flex justify-center">
-				<div class="w-full xl:w-10/12">
-					<BaseHeading class="mb-6" :heading-level="'2'" :theme="'h2'">About</BaseHeading>
-					<div class="space-y-8">
-						<BaseRichText
-							v-for="about in pluginAbout"
-							:key="about.id"
-							:body="about"
-							:classes="'text-tertiery leading-8 font-medium text-lg xl:text-xl'"
-						/>
-					</div>
+		<section class="bg-body">
+			<div class="py-10 max-w-sm mx-auto xl:max-w-3/4">
+				<BaseHeading class="mb-4 xl:mb-6" :heading-level="'2'" :theme="'h2'">
+					<span class="text-4xl xl:text-[56px] xl:leading-[78px]">About</span></BaseHeading
+				>
+				<div class="space-y-8">
+					<BaseRichText
+						v-for="about in pluginAbout"
+						:key="about.id"
+						:body="about"
+						:classes="'text-tertiery leading-8 text-lg xl:text-[20px] font-medium text-lg xl:text-xl'"
+					/>
 				</div>
 			</div>
 		</section>
