@@ -35,7 +35,8 @@ module.exports = {
 				body: ['Poppins', 'Helvetica', 'Arial', 'sans-serif'],
 			},
 			colors: {
-				body: '#F8F2EA',
+				intro: '#FBF8F6',
+				body: '#f8f2ea',
 				'highlight-body': '#FCFAF7',
 				primary: '#332a1d',
 				'highlight-primary': '#DE6F47',
@@ -43,6 +44,19 @@ module.exports = {
 				'highlight-secondary': '#b75633',
 				tertiery: '#69645C',
 				'highlight-tertiery': '#F8EAE4',
+			},
+			maxWidth: {
+				sm: '90%',
+				xl: '1170px',
+				'3/4': '790.59px',
+			},
+			minWidth: {
+				sm: '90%',
+				xl: '1170px',
+				'3/4': '790.59px',
+			},
+			dropShadow: {
+				custom: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 			},
 		},
 	},
