@@ -55,6 +55,9 @@ module.exports = {
 				xl: '1170px',
 				'3/4': '790.59px',
 			},
+			boxShadow: {
+				custom: '0px 56px 40px -30px rgba(190, 152, 104, 0.15);',
+			},
 			dropShadow: {
 				custom: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 			},
