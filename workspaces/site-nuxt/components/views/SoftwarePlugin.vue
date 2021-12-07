@@ -149,7 +149,7 @@
 										:rounded="false"
 										:url="'https://fostercommerce.com'"
 									>
-										<span class="flex items-center text-2xl text-highlight-secondary">
+										<span class="flex items-center text-lg xl:text-2xl text-highlight-secondary">
 											Buy now
 											<svg-icon
 												:name="`icons/arrow-diagonal`"
@@ -176,21 +176,21 @@
 					<li>
 						<BaseLink
 							:url="'https://fostercommerce.com/about'"
-							:classes="'underline text-highlight-primary text-lg md:text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
+							:classes="'underline text-highlight-primary text-lg md:text-xl xl:text-2xl xl:leading-10 tracking-[0.02em]'"
 							>About</BaseLink
 						>
 					</li>
 					<li>
 						<BaseLink
 							:url="'https://fostercommerce.com/about'"
-							:classes="'text-tertiery text-lg md:text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
+							:classes="'text-tertiery text-lg md:text-xl xl:text-2xl xl:leading-10 tracking-[0.02em]'"
 							>Changelog</BaseLink
 						>
 					</li>
 					<li>
 						<BaseLink
 							:url="'https://fostercommerce.com/about'"
-							:classes="'flex items-center text-tertiery text-lg md:text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
+							:classes="'flex items-center text-tertiery text-lg md:text-xl xl:text-2xl xl:leading-10 tracking-[0.02em]'"
 						>
 							Documentation
 							<svg-icon
@@ -203,7 +203,7 @@
 					<li>
 						<BaseLink
 							:url="'https://fostercommerce.com/about'"
-							:classes="'flex items-center text-tertiery text-xl xl:text-2xl leading-10 tracking-[0.02em]'"
+							:classes="'flex items-center text-tertiery text-xl xl:text-2xl xl:leading-10 tracking-[0.02em]'"
 						>
 							Repository
 							<svg-icon
