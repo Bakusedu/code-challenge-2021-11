@@ -89,7 +89,7 @@
 
 <template>
 	<main>
-		<section class="bg-intro py-16 flex flex-col space-y-24">
+		<section class="bg-intro py-16 flex flex-col space-y-28">
 			<div class="max-w-sm xl:max-w-xl mx-auto">
 				<BaseLayoutColumns layout="thirds" align="left" valign="center" gap="none" element="div">
 					<div class="space-y-10">
@@ -105,34 +105,36 @@
 							</div>
 						</div>
 						<div class="w-full xl:max-w-[624px]">
-							<BaseLayoutGrid :gap="'small'" :element="'div'">
-								<div class="border-l-2 pl-5 space-y-3 border-secondary">
-									<BaseHeading class="mb-4" :heading-level="'2'" :theme="'h4'">Version</BaseHeading>
+							<div class="flex flex-col space-y-3 xl:space-y-0 xl:flex-row justify-between">
+								<div class="border-l-2 pl-5 border-secondary">
+									<BaseHeading :heading-level="'2'" :theme="'h4'" class="mb-2">
+										<span class="text-xl leading-6 font-medium">Version</span>
+									</BaseHeading>
 									<BaseRichText
 										:body="pluginVersion"
 										:classes="'text-primary text-lg xl:text-[32px] font-medium leading-[40px]'"
 									/>
 								</div>
-								<div class="border-l-2 pl-5 space-y-3 border-secondary">
-									<BaseHeading class="mb-4" :heading-level="'2'" :theme="'h4'"
-										>Last update</BaseHeading
-									>
+								<div class="border-l-2 pl-5 border-secondary">
+									<BaseHeading :heading-level="'2'" :theme="'h4'" class="mb-2">
+										<span class="text-xl leading-6 font-medium">Last update</span>
+									</BaseHeading>
 									<BaseRichText
 										:body="lastUpdated"
 										:classes="'text-primary text-lg xl:text-[32px] font-medium leading-[40px]'"
 									/>
 								</div>
-								<div class="border-l-2 pl-5 space-y-3 border-secondary">
-									<BaseHeading class="mb-4 inline" :heading-level="'2'" :theme="'h4'"
-										>Compatibility</BaseHeading
-									>
+								<div class="border-l-2 pl-5 border-secondary">
+									<BaseHeading :heading-level="'2'" :theme="'h4'" class="mb-2">
+										<span class="text-xl leading-6 font-medium">Compatibility</span>
+									</BaseHeading>
 									<!-- Dropdown -->
 									<SoftwarePluginDropdown
 										:selected="pluginCompatibility"
 										:options="pluginCompatibilities"
 									/>
 								</div>
-							</BaseLayoutGrid>
+							</div>
 						</div>
 					</div>
 					<template v-slot:aside>
@@ -147,12 +149,12 @@
 										:rounded="false"
 										:url="'https://fostercommerce.com'"
 									>
-										<span class="flex items-center text-highlight-secondary">
+										<span class="flex items-center text-2xl text-highlight-secondary">
 											Buy now
 											<svg-icon
 												:name="`icons/arrow-diagonal`"
 												fill="currentColor"
-												class="w-3 h-3 xl:w-[17.12px] xl:h-[12px] inline-flex"
+												class="w-3 h-3 xl:w-[18px] xl:h-[18px] inline-flex"
 											/>
 										</span>
 									</BaseButton>
@@ -194,7 +196,7 @@
 							<svg-icon
 								:name="`icons/arrow-diagonal`"
 								fill="currentColor"
-								class="w-3 h-3 xl:w-[17.12px] xl:h-[12px] inline"
+								class="w-3 h-3 xl:w-[18px] xl:h-[18px] inline"
 							/>
 						</BaseLink>
 					</li>
@@ -207,7 +209,7 @@
 							<svg-icon
 								:name="`icons/arrow-diagonal`"
 								fill="currentColor"
-								class="w-3 h-3 xl:w-[17.12px] xl:h-[12px] inline"
+								class="w-3 h-3 xl:w-[18px] xl:h-[18px] inline"
 							/>
 						</BaseLink>
 					</li>
