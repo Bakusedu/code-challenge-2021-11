@@ -62,6 +62,7 @@
 				p-2
 				z-20
 				bg-white bg-opacity-50
+				shadow-custom
 				backdrop-filter backdrop-blur
 				||
 				card
