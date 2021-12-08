@@ -1,5 +1,6 @@
 <script>
 	/** import used components */
+	import BaseIcon from '@/components/BaseIcon';
 	import BaseHeading from '@/components/BaseHeading';
 	import BaseRichText from '@/components/BaseRichText';
 	import BaseCardGraphic from '@/components/BaseCardGraphic';
@@ -10,6 +11,7 @@
 	export default {
 		name: 'SoftwarePlugin',
 		components: {
+			BaseIcon,
 			BaseHeading,
 			BaseRichText,
 			BaseCardGraphic,
@@ -151,10 +153,10 @@
 									>
 										<span class="flex items-center text-lg xl:text-2xl text-highlight-secondary">
 											Buy now
-											<svg-icon
-												:name="`icons/arrow-diagonal`"
-												fill="currentColor"
-												class="w-3 h-3 xl:w-[18px] xl:h-[18px] inline-flex"
+											<BaseIcon
+												:file="'arrow-diagonal'"
+												:classes="'w-3 h-3 xl:w-[18px] xl:h-[18px]'"
+												:alt="'arrow-diagonal'"
 											/>
 										</span>
 									</BaseButton>
@@ -193,10 +195,10 @@
 							:classes="'flex items-center text-tertiery text-lg md:text-xl xl:text-2xl xl:leading-10 tracking-[0.02em]'"
 						>
 							Documentation
-							<svg-icon
-								:name="`icons/arrow-diagonal`"
-								fill="currentColor"
-								class="w-3 h-3 xl:w-[18px] xl:h-[18px] inline"
+							<BaseIcon
+								:file="'arrow-diagonal'"
+								:classes="'w-3 h-3 xl:w-[18px] xl:h-[18px]'"
+								:alt="'arrow-diagonal'"
 							/>
 						</BaseLink>
 					</li>
@@ -206,10 +208,10 @@
 							:classes="'flex items-center text-tertiery text-xl xl:text-2xl xl:leading-10 tracking-[0.02em]'"
 						>
 							Repository
-							<svg-icon
-								:name="`icons/arrow-diagonal`"
-								fill="currentColor"
-								class="w-3 h-3 xl:w-[18px] xl:h-[18px] inline"
+							<BaseIcon
+								:file="'arrow-diagonal'"
+								:classes="'w-3 h-3 xl:w-[18px] xl:h-[18px]'"
+								:alt="'arrow-diagonal'"
 							/>
 						</BaseLink>
 					</li>
