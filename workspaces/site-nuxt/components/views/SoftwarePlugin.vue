@@ -155,7 +155,7 @@
 											Buy now
 											<BaseIcon
 												:file="'arrow-diagonal'"
-												:classes="'w-3 h-3 xl:w-[20px] top-[1px] xl:h-[20px] ml-[1px]'"
+												:classes="'w-4 h-4 xl:w-[20px] top-[1px] xl:h-[20px] ml-[1px]'"
 												:alt="'arrow-diagonal'"
 											/>
 										</span>
@@ -197,7 +197,7 @@
 							Documentation
 							<BaseIcon
 								:file="'arrow-diagonal'"
-								:classes="'w-3 h-3 xl:w-[20px] top-[1px] xl:h-[20px] ml-[1px]'"
+								:classes="'w-4 h-4 xl:w-[20px] top-[1px] xl:h-[20px] ml-[1px]'"
 								:alt="'arrow-diagonal'"
 							/>
 						</BaseLink>
@@ -210,7 +210,7 @@
 							Repository
 							<BaseIcon
 								:file="'arrow-diagonal'"
-								:classes="'w-3 h-3 xl:w-[20px] top-[1px] xl:h-[20px] ml-[1px]'"
+								:classes="'w-4 h-4 xl:w-[20px] top-[1px] xl:h-[20px] ml-[1px]'"
 								:alt="'arrow-diagonal'"
 							/>
 						</BaseLink>
